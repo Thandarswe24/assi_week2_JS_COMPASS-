@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="/color_picker/style.css">
+    
+</head>
+<body>
+    <h1 id="title">Click the Button below!</h1>
+    <button id="button">New Color</button>
+
+    <script>
+        let title = document.querySelector('#title');
+        let button = document.querySelector('#button');
+
+        function randomColor() {
+        let nums = [];
+        for (let i = 0; i < 3; i++) {
+        nums.push(Math.floor(Math.random() * 226));
+            }
+        let color = `rgb(${nums[0]}, ${nums[1]}, ${nums[2] })`;
+        return color;
+                    }
+
+        button.addEventListener('click', () => {
+        let newColor = randomColor();
+        document.body.style.backgroundColor = newColor;
+        title.innerText = newColor;
+                    });
+    </script>
+
+</body>
+</html>

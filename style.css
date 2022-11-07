@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  #title, #button {
+    padding: .5em 1em;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+    color: #111;
+    font-family: sans-serif;
+    font-weight: 400;
+  }
+  
+  #title {
+    font-size: 2rem;
+  }
+  
+  #button {
+    border: 1px solid #888;
+    font-size: 1rem;
+      cursor: pointer;
+    transition: all .2s ease-out;
+  }
+  #button:hover {
+    box-shadow: 0px 10px 13px -7px #222;
+    transform: scale(1.05);
+  }
+  #button:active {
+    transform: scale(1);
+    box-shadow: none;
+  }
